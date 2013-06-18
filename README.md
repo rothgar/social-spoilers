@@ -18,6 +18,6 @@ Spoilers will also be automatically ^identified between carrots and #hashtags or
 Multiple ^spoilers^ can be ^used^ at a single ^time^
 
 ## Credits
-Written by Justin Garrison\n
-@rothgar
-justingarrison.com
+Written by Justin Garrison  
+@rothgar  
+justingarrison.com  
