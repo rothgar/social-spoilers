@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         jQuery For Chrome (A Cross Browser Example)
-// @namespace    jQueryForChromeExample
-// @include      *
-// @author       Erik Vergobbi Vold & Tyler G. Hicks-Wright
-// @description  This userscript is meant to be an example on how to use jQuery in a userscript on Google Chrome.
+// @name         social-spoilers
+// @namespace    
+// @include      twitter.com
+// @author       Justin Garrison
+// @description  This userscript hides spoilers on social networking sites.
 // ==/UserScript==
 
 // a function that loads jQuery and calls a callback function when jQuery has finished loading
@@ -21,10 +21,8 @@ function addJQuery(callback) {
 // the guts of this userscript
 function main() {
   // Note, jQ replaces $ to avoid conflicts.
-  alert("There are " + jQ('a').length + " links on this page.");
+  jQ('p.js-tweet-text.tweet-text').filter(function() { return /\^[a-zA-Z0-9:.,?! ]+[^#+^?@?\$]/.test(this.name); });
 }
 
 // load jQuery and execute the main function
 addJQuery(main);
-
-$('p.js-tweet-text.tweet-text').filetr(function() { return /\^[a-zA-Z0-9:.,?! ]+[^#+^?@?\$]/.test(this.name); });
