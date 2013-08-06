@@ -12,9 +12,9 @@ The user script can be installed in FireFox using Greasemonkey and Google Chrome
 ## How to use
 To tag text as a spoiler use the ^ character
 
-Spoilers can be identified by using ^two carrots to rollup^ only some text.  
+Spoilers can be identified by using ^two carats to rollup^ only some text.  
 Or it can be used to identify a ^spoiler to the end of a line.  
-Spoilers will also be automatically ^identified between carrots and #hashtags or between ^carrots and @mentions  
+Spoilers will also be automatically ^identified between carats and #hashtags or between ^carats and @mentions  
 Multiple ^spoilers^ can be ^used^ at a single ^time^
 
 ## Credits
