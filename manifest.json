@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Social Spoilers",
+  "description": "Hide spoilers on social network sites",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Unspoil me"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "css": ["customstyles.css"],
+      "js": ["jquery-1.11.3.min.js","spoilers.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs", "https://twitter.com/*"
+  ]
+}
