@@ -15,7 +15,7 @@
       "matches": ["https://twitter.com/*"],
       "css": ["customstyles.css"],
       "js": ["jquery-1.11.3.min.js","spoilers.js"],
-      "run_at": "document_start"
+      "run_at": "document_end"
     }
   ],
   "permissions": [

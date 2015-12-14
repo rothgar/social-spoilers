@@ -37,3 +37,5 @@ a.each(function() {
     var newText = text.replace(/\^.+\^/, 'twitter')
     $(this).find('div > div.content > p').text(newText)
   }
+}
+)
