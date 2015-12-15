@@ -17,7 +17,6 @@ function loadBlacklist() {
 
 // loadBlacklist();
 
-// Save all tweets
 a = $('.stream-container li[id|="stream-item-tweet"]');
 
 // read tweet content
