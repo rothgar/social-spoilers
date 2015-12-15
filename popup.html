@@ -19,6 +19,10 @@
         overflow: hidden;
         max-width: 400px;
       }
+      #blacklist {
+        height: 220px;
+        width: 220px;
+      }
     </style>
 
     <!--
@@ -27,11 +31,11 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-    <script src="popup.js"></script>
+    <script src="jquery-1.11.3.min.js"></script>
   </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+    <textarea id="blacklist"></textarea>
+    <button type="button" id="saveBlacklist">Save</button>
+    <script src="popup.js"></script>
   </body>
 </html>
-
