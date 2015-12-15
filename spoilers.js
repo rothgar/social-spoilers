@@ -32,13 +32,13 @@ a = $('.stream-container li[id|="stream-item-tweet"]')
 
 // read tweet content
 a.each(function() {
-  var content = $(this).find('div > div.content > p')
-  var text = content.text()
+  var $content = $(this).find('div > div.content > p')
+  var text = $content.text()
   if(text.match(/\^.+\^/)) {
     var newText = text.replace(/\^.+\^/, ['<span class="spoiler">', text, '</span>'].join(''))
 
     // target this class if you want to do something with the whole tweet
-    content.addClass('tweet-spoiler')
-    content.html(newText)
+    $content.addClass('tweet-spoiler')
+    $content.html(newText)
   }
 })
