@@ -19,6 +19,7 @@
     }
   ],
   "permissions": [
-    "tabs", "https://twitter.com/*"
+    "tabs", "https://twitter.com/*",
+    "storage"
   ]
 }
