@@ -27,6 +27,17 @@
 //
 // ^TYLER DURDEN DOESN’T EXIST^
 //
+
+var blacklist = [];
+
+function loadBlacklist() {
+  chrome.storage.sync.get('blacklist', function(list){
+    blacklist = list.blacklist;
+  });
+}
+
+loadBlacklist();
+
 // Save all tweets
 a = $('.stream-container li[id|="stream-item-tweet"]')
 
