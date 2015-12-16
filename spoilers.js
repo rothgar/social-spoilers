@@ -31,12 +31,14 @@ a.each(function() {
     // target this class if you want to do something with the whole tweet
     $content.addClass('tweet-spoiler')
     $content.html(newText)
-  }
+  };
   // loop blacklist
-  blacklist.forEach( funciton(regex) {
-    console.log(regex);
+  blacklist.forEach(function(regex) {
     if(text.toLowerCase().match(regex.toLowerCase())) {
-      console.log(text.toLowerCase())
+      var newText = text.replace(/.*/, ['<span class="spoiler">', text, '</span>'].join(''))
+      var newnewText = newText.toLowerCase().replace(regex.toLowerCase(), ['</span>', regex, '<span class="spoiler">'].join(''))
+      $content.html(newnewText)
+      $content.addClass('tweet-spoiler')
     };
-  )};
+  });
 });
