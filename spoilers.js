@@ -8,7 +8,7 @@
 
 // Regex to match what I need /\^[a-zA-Z0-9:.,?! ]+[^#|^|@|\$]/g
 
-var blacklist = ["#StarWars","#TTY","foo"];
+var blacklist = ["StarWars","#TTY","foo"];
 
 function loadBlacklist() {
   chrome.storage.sync.get('blacklist', function(list){
@@ -24,7 +24,7 @@ a = $('.stream-container li[id|="stream-item-tweet"]');
 // read tweet content
 a.each(function() {
   var $content = $(this).find('div > div.content > p');
-  var text = $content.text();
+  var text = $content.html();
   if(text.match(/\^.+\^/)) {
     var newText = text.replace(/\^.+\^/g, ['<span class="spoiler">', text.match(/\^.+\^/), '</span>'].join(''))
 
@@ -35,9 +35,15 @@ a.each(function() {
   // loop blacklist
   blacklist.forEach(function(regex) {
     if(text.toLowerCase().match(regex.toLowerCase())) {
-      var newText = text.replace(/.*/, ['<span class="spoiler">', text, '</span>'].join(''))
-      var newnewText = newText.toLowerCase().replace(regex.toLowerCase(), ['</span>', regex, '<span class="spoiler">'].join(''))
-      $content.html(newnewText)
+      var newText = text.replace(/.*/, ['<span class="spoiler">', text, '</span>'].join(''));
+      var $newText = $(newText);
+      var hashtags = $newText.find('.twitter-hashflag-container');
+      hashtags.each(function(idx, hashtag, arr) {
+        var outerhtml = hashtag.outerHTML;
+        var newnewText = newText.replace(outerhtml, ['</span>', outerhtml, '<span class="spoiler">'].join(''));
+        $content.html(newnewText);
+      });
+
       $content.addClass('tweet-spoiler')
     };
   });
