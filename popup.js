@@ -9,7 +9,17 @@ $(function(){
         console.log("Error saving blacklist");
       }
       console.log('blacklist saved');
-      window.close();
     });
+    //window.close();
   });
 });
+
+document.body.onload = function() {
+    chrome.storage.sync.get('list', function(items) {
+      if (!chrome.runtime.error) {
+        console.log(items.list);
+        $('userBlacklist').val(items.list);
+      }
+      console.log('blacklist loaded');
+    });
+  };
