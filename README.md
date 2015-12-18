@@ -23,7 +23,9 @@ Spoilers can be identified by using ^two carrots to rollup^ only some text.
 
 ## Credits
 Written by Justin Garrison  
+
 [@rothgar](https://twitter.com/rothgar)
+
 [justingarrison.com](justingarrison.com) 
 
 Special thanks to [Kyle Hayes](https://github.com/kylehayes)
