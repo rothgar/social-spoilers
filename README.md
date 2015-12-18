@@ -1,23 +1,29 @@
-social-spoilers
+Social Spoilers
 ===============
 
 ## About
-A user script that hides spoilers on social websites
+An extension that hides spoilers on social websites
+
+![](https://raw.githubusercontent.com/rothgar/social-spoilers/master/images/spoilers.gif)
 
 The script attempts to hide any identified spoilers on any social network (right now only supporting twitter)
 
 ## Installation
-The user script can be installed in FireFox using Greasemonkey and Google Chrome by dragging and dropping the js file to chrome://chrome/extensions/
+[WIP] Available in the Chrome Web Store
 
 ## How to use
+Add words or hashtags you want to hide by adding them to the list in the settings. A default list is provided in the app.
+
+If you want to match hashtags make sure you start them with #
+
+## How to automatically hide text
 To tag text as a spoiler use the ^ character
 
 Spoilers can be identified by using ^two carrots to rollup^ only some text.  
-Or it can be used to identify a ^spoiler to the end of a line.  
-Spoilers will also be automatically ^identified between carrots and #hashtags or between ^carrots and @mentions  
-Multiple ^spoilers^ can be ^used^ at a single ^time^
 
 ## Credits
 Written by Justin Garrison  
-@rothgar  
-justingarrison.com  
+[@rothgar](https://twitter.com/rothgar)
+[justingarrison.com](justingarrison.com) 
+
+Special thanks to [Kyle Hayes](https://github.com/kylehayes)
