@@ -52,8 +52,9 @@ a.each(function() {
     // regular text matching
     } else {
       if(text.toLowerCase().match(regex.toLowerCase())) {
-        var newText = text.replace(regex, ['<span class="spoiler">', text.match(regex), '</span>'].join(''));
-        $content.html(newText);
+        var newText = text.replace(regex, ['</span>', text.match(regex), '<span class="spoiler">'].join(''));
+        var newnewText = newText.replace(/.*/, ['<span class="spoiler">', newText, '</span>'].join(''));
+        $content.html(newnewText);
       };
     };
   });
