@@ -18,7 +18,7 @@ document.body.onload = function() {
     chrome.storage.sync.get('list', function(items) {
       if (!chrome.runtime.error) {
         console.log(items.list);
-        $('userBlacklist').val(items.list);
+        $('#userBlacklist').val(items.list);
       }
       console.log('blacklist loaded');
     });

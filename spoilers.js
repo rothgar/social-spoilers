@@ -10,12 +10,13 @@
 var blacklist = ["#StarWars","#TTY","foo","baz"];
 
 function loadBlacklist() {
-  chrome.storage.sync.get('blacklist', function(list){
-    blacklist = list.blacklist;
+  chrome.storage.sync.get('list', function(list){
+    blacklist = blacklist + list.blacklist;
+    console.log(list)
   });
 }
 
-// loadBlacklist();
+loadBlacklist();
 
 a = $('.stream-container li[id|="stream-item-tweet"]');
 
